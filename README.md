@@ -67,6 +67,7 @@ else
     echo -e "${RED}✗ Build failed!${NC}"
 fi
 ```
-#Output:
+#Output (Note: PNG is not obtained directly):
 ![First Ray Tracer Output](Image/output.ppm)
+![First Ray Tracer Image](Image/output.ppm)
 
