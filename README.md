@@ -68,5 +68,5 @@ else
 fi
 ```
 #Output:
-![First Ray Tracer Output](RayTracing/Image/output.ppm)
+![First Ray Tracer Output](Image/output.ppm)
 
