@@ -12,7 +12,7 @@ RayTracingMain/
     └── .gitignore
 ```
 
-## PPM Image Format
+## 1. PPM Image Format
 
 PPM (Portable Pixmap) is a simple text-based format starting with "P3" for color images, followed by width, height, max color value (255), and RGB pixel values. [davis.lbl](https://davis.lbl.gov/Manuals/NETPBM/doc/ppm.html)
 
@@ -67,3 +67,5 @@ else
     echo -e "${RED}✗ Build failed!${NC}"
 fi
 ```
+#Output:
+![First Ray Tracer Output](RayTracing/Image/output.png)
