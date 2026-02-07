@@ -68,4 +68,5 @@ else
 fi
 ```
 #Output:
-<img width="256" height="256" alt="image" src="https://github.com/user-attachments/assets/34d9d3ab-f569-44ad-99a1-dc1d5759d78e" />
+![First Ray Tracer Output](RayTracing/Image/output.ppm)
+
