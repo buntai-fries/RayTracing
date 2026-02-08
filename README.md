@@ -26,7 +26,7 @@ This generates a viewable gradient image. [realtimerendering](https://www.realti
 
 `render.sh` is well-structured for Fedora: it cleans/builds with CMake, runs the executable, saves to `RayTracing/Image/output.ppm`, and converts to PNG using ImageMagick's `convert` if available. [cs.swarthmore](https://www.cs.swarthmore.edu/~soni/cs35/f13/Labs/extras/01/ppm_info.html)
 
-Here's the cleaned, GitHub-ready bash block (fixed escapes and spacing):
+Here's the code-block:
 
 ```bash
 #!/bin/bash
