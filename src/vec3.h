@@ -4,12 +4,12 @@
 #include <cmath>
 #include <iostream>
 
-class Vec3 {
+class vec3 {
 public:
     double v[3];
 
     vec3():v{0, 0, 0} {}
-    vec3(double e0, double e1, double e2):v{e0, e1, e2} {}
+    vec3(double v0, double v1, double v2):v{v0, v1, v2} {}
 
     double x() const {
         return v[0];
@@ -25,10 +25,10 @@ public:
     double operator[](int i) const { return v[i]; }
     double& operator[](int i) { return v[i]; }
 
-    vec3& operator+=(const vec3& v) {
-        v[0] += v.v[0];
-        v[1] += v.v[1];
-        v[2] += v.v[2];
+    vec3& operator+=(const vec3& v1) {
+        v[0] += v1.v[0];
+        v[1] += v1.v[1];
+        v[2] += v1.v[2];
         return *this;
     }
 
