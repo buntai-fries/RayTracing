@@ -70,3 +70,50 @@ fi
 ## Output (Note: PNG is not obtained directly):
 ![First Ray Tracer Image](Image/output.png)
 
+## 2. Vector 3 class
+Instead of using vector 4, I will be using vector 3 since it's not wrong. 
+```cpp
+class vec3 {
+  public:
+    double v[3];
+    vec3() : v{0,0,0} {
+    }
+    vec3(double v0, double v1, double v2) : v{v0, v1, v2} {
+    }
+    double x() const {
+        return v[0];
+    }
+    double y() const {
+        return v[1];
+    }
+    double z() const {
+        return v[2];
+    }
+};
+```
+This vec 3 can be used for defining colors, position. Also, I am in no short of memory so I am using double instead of float.
+Now, create color utility functions using the above class, i.e. vec3.
+```cpp
+void write_color(std::ostream& out, const color& pixel_color) {
+    auto r = pixel_color.x();
+    auto g = pixel_color.y();
+    auto b = pixel_color.z();
+
+    // Translate the [0,1] component values to the byte range [0,255].
+    int rbyte = int(255.999 * r);
+    int gbyte = int(255.999 * g);
+    int bbyte = int(255.999 * b);
+
+    // Write out the pixel color components.
+    out << rbyte << ' ' << gbyte << ' ' << bbyte << '\n';
+}
+```
+
+Call this function inside main() in main.cpp as such:
+```cpp
+auto pixel_color = color(double(i)/(imageWidth-1), double(j)/(imageHeight-1), 0);
+            write_color(std::cout, pixel_color);
+```
+
+## Output (Note: We get the same output):
+![First Ray Tracer Image](Image/output.png)
